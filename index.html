@@ -23,12 +23,13 @@
     </style>
 </head>
 <body>
-    <h1>Se viene la mudanza!!!!!!</h1>
+    <h1 id="title">¡NOS MUDAMOS EL! <span id="targetDateDisplay"></span></h1>
     <div id="countdown" class="countdown">Cargando...</div>
 
     <script>
         // Fecha objetivo: 27 de febrero de 2025 a las 00:00
-        const targetDate = new Date("Feb 27, 2025 00:00:00").getTime();
+        const targetDate = new Date("Feb 27, 2025 00:00:00");
+        const targetDateFormatted = targetDate.toLocaleDateString("es-ES", { year: 'numeric', month: 'long', day: 'numeric' });
 
         // Función para actualizar la cuenta regresiva
         const countdownFunction = setInterval(function() {
